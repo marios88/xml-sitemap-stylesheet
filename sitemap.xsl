@@ -34,38 +34,13 @@
                         <xsl:if test="sitemap:urlset/sitemap:url/xhtml:link">
                             <span class="dib mr2 ph3 pv1 f6 normal mid-gray bg-light-blue br-pill">Xhtml</span>
                         </xsl:if>
-                    </div>
-                    <h2 class="ma0 mt4 f4 normal">
-                        <xsl:choose>
-                            <xsl:when test="sitemap:sitemapindex">
-                                This index contains
-                                <strong class="blue"><xsl:value-of select="count(sitemap:sitemapindex/sitemap:sitemap)"/></strong>
-                                sitemaps.
-                            </xsl:when>
-                            <xsl:otherwise>
-                                This index contains
-                                <strong class="blue"><xsl:value-of select="count(sitemap:urlset/sitemap:url)"/></strong>
-                                URLs.
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </h2>
-                    <p>
-                        This is an XML sitemap, meant for consumption by search engines.<br/>
-                        You can find more information about XML sitemaps on <a href="https://sitemaps.org" class="link blue">sitemaps.org</a>.
-                    </p>
+                    </div>                                      
                 </header>
 
                 <xsl:apply-templates/>
-
-                <footer class="mw8 center pv4 tc">
-                    This is an open source <a href="https://github.com/pedroborges/xml-sitemap-stylesheet" title="Go to Github" class="link blue">XML Sitemap Stylesheet</a> created by <a href="https://pedroborg.es" title="Pedro Borges" class="link blue">pedroborg.es</a>
-                </footer>
-
             </body>
         </html>
     </xsl:template>
-
-
     <xsl:template match="sitemap:sitemapindex">
         <div class="mw8 center">
             <div class="overflow-auto">
